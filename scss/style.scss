@@ -55,15 +55,41 @@ body {
 		height: 100%;
 		width: 100px;
 		position: absolute;
+		font-size: 30pt;
+		color: #fff;
+		z-index: 10;
 		&:hover {
 			cursor: pointer;
+			span {
+				-webkit-transition: color .5s;
+				-moz-transition: color .5s;
+				-o-transition: color .5s;
+				transition: color .5s;
+				color: #fff;
+			}
+		}
+		span {
+			color: transparent;
+			-webkit-transition: color .5s;
+			-moz-transition: color .5s;
+			-o-transition: color .5s;
+			transition: color .5s;
 		}
 	}
+	
 	.left {
 		left: 0;
+		span {
+			top: 40%;
+			left: 20px;
+		}
 	}
 	.right {
 		right: 0;
+		span {
+			top: 40%;
+			right: -30px;		
+		}
 	}
 }
 #slides {
@@ -99,4 +125,14 @@ body {
 		opacity: 1;
 		z-index: 2;
 	}
+}
+//Footer
+.footer {
+	position: absolute;
+	bottom: 0;
+	padding: 1rem;
+	width: 100%;
+	background-color: #efefef;
+	text-align: center;
+	background-color: $secondary;
 }

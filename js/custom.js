@@ -9,15 +9,6 @@ function pauseSlideshow() {
     playing = false;
     clearInterval(slideInterval);
 }
-function playSlideshow() {
-    playing = true;
-    slideInterval = setInterval(nextSlide,2000);
-}
-function nextSlide() {
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-}
 function nextSlide() {
     goToSlide(currentSlide+1);
 }
