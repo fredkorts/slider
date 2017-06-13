@@ -1,0 +1,102 @@
+//Base
+@import "base/_normalize.scss";
+@import "base/FontAwesome/font-awesome.scss";
+
+//Third party
+
+//Variables
+$primary: #E8EBF7;
+$secondary: #ACBED8;
+$links: $primary;
+$slider-background: #F2D398;
+
+//Navigation
+body {
+	background: $primary !important;
+	height: 100%;
+}
+.header-wrapper {
+	background-color: $secondary;
+}
+.navbar-default {
+	background-color: transparent !important;
+	border: none !important;
+}
+.page-header {
+	border: none !important;
+	h1 {
+		color: $links;
+	}
+}
+#navbar {
+	.navbar-nav {
+		li {
+			a {
+				color: $links;
+			}
+		}
+	}
+}
+
+//Content 
+#main-content {
+	margin: 0 15px;
+	.container {
+		h1 {
+			color: $secondary;
+		}
+	}
+}
+
+//Slider
+.slides-wrapper {
+	position: relative;
+	.button {
+		height: 100%;
+		width: 100px;
+		position: absolute;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.left {
+		left: 0;
+	}
+	.right {
+		right: 0;
+	}
+}
+#slides {
+    position: relative;
+    min-height: 300px;
+	width: 100%;
+	overflow: hidden;
+	border: 8px solid #fff;
+	background: $slider-background;
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+		.slide {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+		opacity: 0;
+		z-index: 1;
+		-webkit-transition: opacity 1s;
+		-moz-transition: opacity 1s;
+		-o-transition: opacity 1s;
+		transition: opacity 1s;
+		img {
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+	.showing {
+		opacity: 1;
+		z-index: 2;
+	}
+}
